@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 10 Calculator
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #fff;
+        }
+        .calcy_wrapper{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            width: 400px;
+            height: 520px;  
+            box-shadow: 0 0 10px 1px grey;  
+
+        }
+        .calculator_name{
+           width: inherit; 
+           font-size: 0.8rem;
+           padding: 2px 0 2px 10px;
+           color: white;
+           border: none;
+           outline: none;
+           background-color: #292323;
+        }
+        #final_answer{
+            width: inherit;
+            height: 100px;
+            background-color: #303030;
+            font-size: 2rem;
+            color: white;
+            text-align: right;
+            border: none;
+            outline: none;
+        }
+        .layer1{
+            width: inherit;
+            height: 90px;
+            display: flex;
+           
+            justify-content: center;
+
+        }
+        input{
+            flex: 1;
+            background: #fff;
+            outline: none;
+            /* border: none; */
+            font-size: 1.2rem;
+            border: 1px solid #504f4f;
+            /* transition: 0.3s ease all; */
+        }
+        input:hover{
+            background: grey;
+        }
+        .layer2{
+            width: inherit;
+            height: 40px;
+            display: flex;
+           
+            justify-content: center;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calcy_wrapper">
+        <form name = "calcy">
+        
+            <input type="text" value="Calculator" class = "calculator_name">
+            <input type="button" name = "answer" id="final_answer">
+            <div class="layer2">
+                <input type="button" value="c" name="" onclick="calcy.answer.value = '' ">
+                <input type="button" value="=" name="" onclick="calcy.answer.value= eval(calcy.answer.value) ">
+            </div>
+            <div class="layer1">
+                <input type="button" value="7" class= "main_number real_number"
+                onclick="calcy.answer.value +='7' ">
+                <input type="button" value="8" class= "main_number real_number"
+                onclick="calcy.answer.value +='8' ">
+                <input type="button" value="9" class= "main_number real_number"
+                onclick="calcy.answer.value +='9' ">
+                <input type="button" value="*" class= "main_number"
+                onclick="calcy.answer.value +='*' ">
+            </div>
+            <div class="layer1">
+                <input type="button" value="4" class= "main_number real_number"
+                onclick="calcy.answer.value +='4' ">
+                <input type="button" value="5" class= "main_number real_number"
+                onclick="calcy.answer.value +='5' ">
+                <input type="button" value="6" class= "main_number real_number"
+                onclick="calcy.answer.value +='6' ">
+                <input type="button" value="-" class= "main_number"
+                onclick="calcy.answer.value +='-' ">
+            </div>
+            <div class="layer1">
+                <input type="button" value="1" class= "main_number real_number"
+                onclick="calcy.answer.value +='1' ">
+                <input type="button" value="2" class= "main_number real_number"
+                onclick="calcy.answer.value +='2' ">
+                <input type="button" value="3" class= "main_number real_number"
+                onclick="calcy.answer.value +='3' ">
+                <input type="button" value="+" class= "main_number"
+                onclick="calcy.answer.value +='+' ">
+            </div>
+            <div class="layer1">
+                <input type="button" value="." class= "main_number"
+                onclick="calcy.answer.value +='.' ">
+                <input type="button" value="0" class= "main_number real_number"
+                onclick="calcy.answer.value +='0' ">
+                <input type="button" value="%" class= "main_number"
+                onclick="calcy.answer.value +='%' ">
+                <input type="button" value="/" class= "main_number"
+                onclick="calcy.answer.value +='/' ">
+            </div>
+    </form>
+    </div>
+
+</body>
+</html>
